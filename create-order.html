@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Order | SmartRoute</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🍔 SmartRoute
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="create-order.html">Create Order</a>
+
+            <a href="route-optimizer.html">Route Optimizer</a>
+
+            <a href="order-history.html">Orders</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="notifications.html">Notifications</a>
+
+            <a href="help-support.html">Help</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CREATE ORDER -->
+
+    <section class="order-page">
+
+        <div class="order-box">
+
+            <div class="page-icon">
+                🚚
+            </div>
+
+            <h1>Create Delivery Order</h1>
+
+            <p class="subtitle">
+
+                Enter pickup and delivery details.
+                SmartRoute will calculate the most efficient route.
+
+            </p>
+
+
+            <form id="orderForm">
+
+
+                <h3 class="form-section-title">
+
+                    🍴 Restaurant Details
+
+                </h3>
+
+
+                <label>Restaurant Name</label>
+
+                <input
+                    type="text"
+                    id="restaurantName"
+                    placeholder="Example: Paradise Biryani"
+                    required
+                >
+
+
+                <label>Restaurant Address</label>
+
+                <textarea
+                    id="restaurantAddress"
+                    placeholder="Example: Madhapur, Hyderabad"
+                    required
+                ></textarea>
+
+
+
+                <h3 class="form-section-title">
+
+                    🏠 Customer Details
+
+                </h3>
+
+
+                <label>Customer Name</label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter customer name"
+                    required
+                >
+
+
+                <label>Delivery Address</label>
+
+                <textarea
+                    id="deliveryAddress"
+                    placeholder="Enter complete delivery address"
+                    required
+                ></textarea>
+
+
+                <label>Food Item</label>
+
+                <input
+                    type="text"
+                    id="foodItem"
+                    placeholder="Example: Chicken Biryani"
+                    required
+                >
+
+
+                <div class="delivery-info">
+
+                    <span>🧠</span>
+
+                    <div>
+
+                        <strong>Smart Route Optimization</strong>
+
+                        <p>
+
+                            The system uses a weighted graph
+                            and Dijkstra's Algorithm to identify
+                            the shortest delivery path.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit">
+
+                    🗺️ Optimize Delivery Route
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/order.js"></script>
+
+</body>
+
+</html>

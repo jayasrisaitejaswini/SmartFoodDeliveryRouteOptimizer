@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Route Optimizer | SmartRoute</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- LEAFLET MAP -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🍔 SmartRoute
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="create-order.html">
+                Create Order
+            </a>
+
+            <a href="route-optimizer.html">
+                Route Optimizer
+            </a>
+
+            <a href="order-history.html">
+                Orders
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN DASHBOARD -->
+
+    <section class="delivery-dashboard">
+
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    🚴 Delivery Route Optimizer
+                </h1>
+
+                <p>
+                    Find the shortest delivery route between
+                    the restaurant and customer location.
+                </p>
+
+            </div>
+
+            <span class="live-badge">
+                ● LIVE MAP
+            </span>
+
+        </div>
+
+
+
+        <!-- PICKUP AND DELIVERY DETAILS -->
+
+        <div class="delivery-summary">
+
+
+            <div class="location-card pickup">
+
+                <div class="location-icon">
+                    🍴
+                </div>
+
+                <div>
+
+                    <small>
+                        PICKUP FROM
+                    </small>
+
+                    <h3 id="restaurantName">
+                        Loading...
+                    </h3>
+
+                    <p id="restaurantAddress">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="route-arrow">
+                ➜
+            </div>
+
+
+            <div class="location-card delivery">
+
+                <div class="location-icon">
+                    🏠
+                </div>
+
+                <div>
+
+                    <small>
+                        DELIVER TO
+                    </small>
+
+                    <h3 id="customerName">
+                        Loading...
+                    </h3>
+
+                    <p id="deliveryAddress">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- REAL MAP -->
+
+        <div class="map-container">
+
+            <div class="map-header">
+
+                <h2>
+                    🗺️ Live Delivery Route
+                </h2>
+
+                <span>
+                    Restaurant → Customer
+                </span>
+
+            </div>
+
+
+            <div id="map"></div>
+
+
+        </div>
+
+
+
+        <!-- BUTTON -->
+
+        <button
+            id="optimizeButton"
+            class="optimize-route-btn"
+        >
+
+            ⚡ Calculate Shortest Route
+
+        </button>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loadingMessage"
+            class="loading-message"
+        >
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div
+            id="routeResult"
+            class="route-result"
+        >
+
+        </div>
+
+
+    </section>
+
+
+    <script src="js/route.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Delivery Partner Dashboard | SmartRoute</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet Map -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🍔 SmartRoute
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="create-order.html">
+                Create Order
+            </a>
+
+            <a href="route-optimizer.html">
+                Route Optimizer
+            </a>
+
+            <a href="order-history.html">
+                Orders
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- DELIVERY DASHBOARD -->
+
+    <section class="delivery-partner-page">
+
+
+        <div class="partner-header">
+
+            <div>
+
+                <h1>
+                    🚴 Delivery Partner Dashboard
+                </h1>
+
+                <p>
+                    Manage your assigned delivery
+                    and track the optimized route.
+                </p>
+
+            </div>
+
+
+            <span
+                id="deliveryStatus"
+                class="delivery-status"
+            >
+                Ready
+            </span>
+
+        </div>
+
+
+
+        <!-- ORDER CARD -->
+
+        <div class="assigned-order-card">
+
+
+            <h2>
+                📦 Current Assigned Order
+            </h2>
+
+
+            <div class="partner-order-info">
+
+
+                <div class="partner-location">
+
+                    <span>
+                        🍴
+                    </span>
+
+                    <div>
+
+                        <small>
+                            PICKUP FROM
+                        </small>
+
+                        <h3 id="partnerRestaurant">
+                            Loading...
+                        </h3>
+
+                        <p id="partnerRestaurantAddress">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="partner-location">
+
+                    <span>
+                        🏠
+                    </span>
+
+                    <div>
+
+                        <small>
+                            DELIVER TO
+                        </small>
+
+                        <h3 id="partnerCustomer">
+                            Loading...
+                        </h3>
+
+                        <p id="partnerCustomerAddress">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- DELIVERY STATS -->
+
+            <div class="partner-stats">
+
+
+                <div>
+
+                    <small>
+                        📏 Distance
+                    </small>
+
+                    <h3 id="partnerDistance">
+                        --
+                    </h3>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        ⏱ Estimated Time
+                    </small>
+
+                    <h3 id="partnerTime">
+                        --
+                    </h3>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        🍔 Food Item
+                    </small>
+
+                    <h3 id="partnerFood">
+                        --
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- MAP -->
+
+        <div class="partner-map-container">
+
+            <h2>
+                🗺️ Optimized Delivery Route
+            </h2>
+
+            <div id="partnerMap"></div>
+
+        </div>
+
+
+
+        <!-- DELIVERY ACTIONS -->
+
+        <div class="delivery-actions">
+
+
+            <button
+                id="startDeliveryBtn"
+                class="start-delivery-btn"
+            >
+
+                🚴 Start Delivery
+
+            </button>
+
+
+            <button
+                id="deliveredBtn"
+                class="delivered-btn"
+                disabled
+            >
+
+                ✅ Mark as Delivered
+
+            </button>
+<a
+    href="order-history.html"
+    class="history-btn"
+>
+    📦 View Order History
+</a>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="js/delivery.js"></script>
+
+</body>
+
+</html>
